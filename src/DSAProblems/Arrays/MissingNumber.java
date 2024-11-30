@@ -1,4 +1,4 @@
-package DSAProblems;
+package DSAProblems.Arrays;
 
 class MissingNumber {
 

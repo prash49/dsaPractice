@@ -1,4 +1,4 @@
-package DSAProblems;
+package DSAProblems.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;
