@@ -1,4 +1,4 @@
-package stringProblems.searching;
+package searching;
 
 public class AgnosticBinarySearching {
 

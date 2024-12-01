@@ -1,4 +1,4 @@
-package stringProblems.searching;
+package searching;
 
 public class BinarySearch {
     // binary search :it fetch index from sorted array as name says it'll devide the Array into two in each iteration by comparing value with mid
