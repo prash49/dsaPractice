@@ -1,5 +1,8 @@
 package DSAProblems.Strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*Given two strings s and t, return true if t is an
 anagram
  of s, and false otherwise.
@@ -22,6 +25,9 @@ public class ValidAnagram {
             return  false;
         }
         int[] counter = new int[26];
+        Map map = new HashMap();
+        Map map2 = new HashMap<>();
+
         for (int i = 0 ; i < s.length(); i ++){
             System.out.println(s.charAt(i) - 'a');
             counter[s.charAt(i) - 'a']++;
