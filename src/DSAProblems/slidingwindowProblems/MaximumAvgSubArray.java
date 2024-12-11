@@ -13,8 +13,8 @@ Output: 12.75000
 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75*/
 public class MaximumAvgSubArray {
     public static void main(String[] args) {
-        int[] nums = {-1};
-        int k = 1;// window size
+        int[] nums = {1,12,-5,-6,50,3};
+        int k = 4;// window size
         System.out.println("maximumAvg of subArray" + findMaxAvgOfSubArray(nums, k));
         System.out.println("maximumAvg of subArray" + findMaxAvg(nums, k));
     }
@@ -40,6 +40,7 @@ public class MaximumAvgSubArray {
                 j++;
             }
         }
+        System.out.println("max:"+ max);
         return (double) max / k;
 
     }

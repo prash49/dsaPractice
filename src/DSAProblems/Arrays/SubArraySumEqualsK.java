@@ -15,14 +15,14 @@ Input: nums = [1,1,1], k = 2
 Output: 2
 Example 2:
 
-Input: nums = [1,2,3], k = 3
+Input: nums = [70,20,30,40,50,60,10,80], k = 3
 Output: 2
  */
 public class SubArraySumEqualsK {
 
     public static void main(String[] args) {
 
-        int[] array = {1, 1, 1};
+        int[] array = {70,20,30,40,50,60,10,80};
         int k = 2;
         System.out.println(subArraSumEualK(array, k));
 
