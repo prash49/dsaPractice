@@ -28,9 +28,7 @@ public class MiddleOfLinkedList {
             this.next = next;
         }
 
-        public static void main(String[] args) {
 
-        }
 
     }
 
