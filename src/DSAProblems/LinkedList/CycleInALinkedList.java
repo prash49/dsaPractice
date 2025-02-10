@@ -1,14 +1,17 @@
 package DSAProblems.LinkedList;
 
+import java.util.List;
+
 public class CycleInALinkedList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(25);
         head.next.next.next = head.next;
-     // do not print using while loop
+        // do not print using while loop
 //        printLinkedList(head);
         System.out.println("isLoopPresent:" + findLLisLoop(head));
+        System.out.println("Loop node value:" + findTheLoopNodeInALoop(head).value);
 
         ListNode head2 = new ListNode(1);
         head2.next = new ListNode(2);
@@ -32,7 +35,7 @@ public class CycleInALinkedList {
         ListNode slow = listNode;
         ListNode fast = listNode;
 
-        while (fast != null && fast.next != null ) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
@@ -45,11 +48,33 @@ public class CycleInALinkedList {
     static ListNode findMiddleLoop(ListNode listNode) {
         ListNode slow = listNode;
         ListNode fast = listNode;
-        while (fast != null && fast.next != null ) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
         return slow;
+    }
+
+    static ListNode findTheLoopNodeInALoop(ListNode head) {
+        if (head == null && head.next == null) {
+            return head;
+        }
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                slow = head;
+                while (slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
+            }
+        }
+        return null;
+
     }
 }
 
