@@ -1,5 +1,6 @@
 package DSAProblems.Arrays;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,9 +20,10 @@ The element 1 occurs at the indices 0 and 3.*/
 public class ContainsDuplicate {
 
     public static void main(String[] args) {
-        int[] arr = {13, 12, 14, 45, 85, 56, 2, 5, 250};
+        int[] arr = {13, 12, 14, 45,45, 85, 56, 2, 5, 250};
         System.out.println(isDuplicatesPresent(arr));
         System.out.println(isDuplicatePresentInArray(arr));
+        System.out.println("secondMethod" + isDuplicatesPresent(arr));
     }
 
     // brute force
@@ -50,8 +52,18 @@ public class ContainsDuplicate {
             }
         }
         return false;
+    }
 
-
+    static boolean duplicatePresent(int[] nums) {
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.containsKey(nums[i])) {
+                return true;
+            } else {
+                hashMap.put(nums[i], hashMap.getOrDefault(nums[i], 1));
+            }
+        }
+        return false;
     }
 }
 
