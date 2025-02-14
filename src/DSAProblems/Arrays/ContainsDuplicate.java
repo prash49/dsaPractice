@@ -23,7 +23,7 @@ public class ContainsDuplicate {
         int[] arr = {13, 12, 14, 45,45, 85, 56, 2, 5, 250};
         System.out.println(isDuplicatesPresent(arr));
         System.out.println(isDuplicatePresentInArray(arr));
-        System.out.println("secondMethod" + isDuplicatesPresent(arr));
+        System.out.println("secondMethod" + duplicatePresent(arr));
     }
 
     // brute force
