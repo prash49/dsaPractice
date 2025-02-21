@@ -22,9 +22,13 @@ public class ReverseLinkedListPractice {
         ListNode current = head;
         ListNode prev = null; // we will return prev node
         while (current != null){
+            //1st Point
             ListNode tempNode = current.next;
+            // rev the link -->  to <--
             current.next = prev;
+            // now move prev to  current
             prev =current;
+            // take up the next to continue
             current =tempNode;
         }
         return prev;
