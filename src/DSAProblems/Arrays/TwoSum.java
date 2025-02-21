@@ -16,7 +16,7 @@ public class TwoSum {
         for (int i = 0; i < nums.length; i++) {
             int remaining = target - nums[i];
             if (map.containsKey(remaining)) {
-                return new int[] {};
+                return new int[] {i, map.get(remaining)};
             }
             map.put(nums[i], i);
         }
