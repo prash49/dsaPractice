@@ -14,7 +14,21 @@ public class insertAHead {
         head.next.next = new NodeEx(arr.get(2));
         head.next.next.next = new NodeEx(arr.get(3));
         insertAHeadIntoNode(val, head);
+      head =   deleteTail(head);
     }
+
+    private static NodeEx deleteTail(NodeEx head) {
+        if(head == null && head.next == null){
+            return null;
+        }
+        NodeEx temp = head;
+        while (temp.next.next !=null){
+         temp =   temp.next;
+        }
+        temp.next = null;
+        return  head;
+    }
+
     public static void   insertAHeadIntoNode(int value, NodeEx head){
         NodeEx temp = new NodeEx(value,head);
     }
