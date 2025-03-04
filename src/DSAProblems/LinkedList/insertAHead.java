@@ -14,7 +14,9 @@ public class insertAHead {
         head.next.next = new NodeEx(arr.get(2));
         head.next.next.next = new NodeEx(arr.get(3));
         insertAHeadIntoNode(val, head);
+        System.out.println("length og ll before deleting tail :: "+ lengthofaLL(head));
       head =   deleteTail(head);
+        System.out.println("length of LL after delete:: "+ lengthofaLL(head));
     }
 
     private static NodeEx deleteTail(NodeEx head) {
@@ -28,7 +30,15 @@ public class insertAHead {
         temp.next = null;
         return  head;
     }
-
+    private static int lengthofaLL(NodeEx head){
+        int cnt=0;
+        NodeEx temp=head;
+        while(temp!=null){
+            temp = temp.next;
+            cnt++;
+        }
+        return cnt;
+    }
     public static void   insertAHeadIntoNode(int value, NodeEx head){
         NodeEx temp = new NodeEx(value,head);
     }
