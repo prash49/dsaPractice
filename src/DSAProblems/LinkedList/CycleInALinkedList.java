@@ -19,6 +19,25 @@ public class CycleInALinkedList {
         head2.next.next.next = new ListNode(15);
         head2.next.next.next.next = new ListNode(20);
         System.out.println("middle:" + findMiddleLoop(head2).value);
+
+        ListNode head3 = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+        ListNode fifth = new ListNode(5);
+
+        head3.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+        // Create a loop
+        fifth.next = third;
+        if (findLLisLoop(head)) {
+            System.out.println("Loop detected in the linked list.");
+        } else {
+            System.out.println("No loop detected in the linked list.");
+        }
+
     }
 
     private static void printLinkedList(ListNode head) {
