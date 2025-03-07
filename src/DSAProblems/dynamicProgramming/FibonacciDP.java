@@ -6,7 +6,7 @@ public class FibonacciDP {
     public static void main(String[] args) {
         // Fibonacci using DP
         //find the fibonacci of 5
-        int n = 5;
+        int n = 7;
         int[] dp = new int[n + 1];
         Arrays.fill(dp, -1);
         System.out.println("fibonacci"+
