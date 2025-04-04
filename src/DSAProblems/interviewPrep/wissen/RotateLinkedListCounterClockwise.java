@@ -10,7 +10,10 @@ public class RotateLinkedListCounterClockwise {
         int numberOfTime = 2;
 
         printListNode(head);
-        rotateCounterClockWise(head, numberOfTime);
+       ListNode newHead = rotateCounterClockWise(head, numberOfTime);
+        System.out.println("------------------------------------------");
+        printListNode(newHead);
+
 
     }
 
@@ -22,13 +25,17 @@ public class RotateLinkedListCounterClockwise {
         ListNode currentNode = head;
         // find the count of list
         while (currentNode.next != null) {
-            currentNode = currentNode.next;
+            currentNode = currentNode.next; // we are assigning because we can make this curcular by assign head to cur.next
             length++;
         }
-        currentNode.next = head;
-        k = k % length;
+        System.out.println("length :"+ length);
+        currentNode.next = head; // making curcular by assiging current.next with head
+        k = k % length; // normalize to not overturn ex: 2 % length = 2 % 5 = 2
+        System.out.println("k :"+ k);
         int stepsToNewHead = length - k;
-        currentNode = head;
+        System.out.println("steps to new Head "+ stepsToNewHead);
+        currentNode = head; // reset head to ready for rotation
+        // loop through the currentNode and rotate till stepsTonewHead
         for (int i = 0; i < stepsToNewHead - 1; i++) {
             currentNode = currentNode.next;
         }
