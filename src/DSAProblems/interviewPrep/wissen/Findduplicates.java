@@ -5,8 +5,9 @@ import java.util.*;
 public class Findduplicates {
     public static void main(String[] args) {
         int[] array = {1, 3, 4, 2, 2};
-        boolean duplicates = findDuplicatesPresent(array);
-        System.out.println("duplicates :" + duplicates);
+//        boolean duplicates = findDuplicatesPresent(array);
+//        System.out.println("duplicates :" + duplicates);
+        System.out.println(Arrays.toString(    findDups(array).toArray()));
 
     }
 
@@ -43,8 +44,20 @@ public class Findduplicates {
 
     static List<Integer> findDups(int[] array) {
         List<Integer> duplicates = new ArrayList<>();
-
-
+        int i = 0;
+        while (i < array.length) {
+            int correctIndex = array[i] - 1;
+          if (array[i] != array[correctIndex]){
+              swapThePlace(array, i, correctIndex);
+          }else {
+              i++;
+          }
+        }
+        for (int j = 0; j < array.length ; j++){
+            if (array[j] != (j + 1) ){
+                duplicates.add(array[j]);
+            }
+        }
         return duplicates;
     }
 }
