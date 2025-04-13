@@ -7,7 +7,7 @@ public class LargestNumber {
     public static void main(String[] args) {
         // example [2,10] can be formed as 210 or 102 need to return 210
         int[] list = {10,2,4,6,8,9};
-      findTheLargestNumberAfterCombine(list);
+        System.out.println( findTheLargestNumberAfterCombine(list));
     }
 
     private static String findTheLargestNumberAfterCombine(int[] list) {
