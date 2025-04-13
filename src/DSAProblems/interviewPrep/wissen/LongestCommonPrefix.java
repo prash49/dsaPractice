@@ -1,5 +1,7 @@
 package DSAProblems.interviewPrep.wissen;
 
+import java.io.ObjectOutputStream;
+
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         String[] strings = {"flower", "flown", "flow"};
@@ -27,6 +29,7 @@ public class LongestCommonPrefix {
 
 
     String practiceLongestCommonPrefix(String[] list) {
+        if (list == null || list.length == 0){return  "";}
         String prefix = list[0];
         for (int i = 1; i < list.length; i++) {
             while (list[i].indexOf(prefix) != 0) {
