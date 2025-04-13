@@ -10,9 +10,10 @@ public class LongestCommonPrefix {
     }
 
     private static String longestCommonPrefix(String[] strings) {
+        if (strings == null || strings.length == 0){return  "";}
         String prefix = strings[0];
         // loop through the list
-        for (int i = 1; i < strings.length - 1; i++) {
+        for (int i = 1; i < strings.length; i++) {
             // now we need to check the string prefix index shouldn't be == 0 if == 0 then stop
             while (strings[i].indexOf(prefix) != 0) {
                 // we need to loop till i find the prefix length for string 1 and string 2 in each iteration
