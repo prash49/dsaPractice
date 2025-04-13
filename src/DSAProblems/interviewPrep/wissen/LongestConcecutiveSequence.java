@@ -31,5 +31,6 @@ public class LongestConcecutiveSequence {
                 maxLen = Math.max(maxLen, currentLength);
             }
         }
+        return maxLen;
     }
 }
