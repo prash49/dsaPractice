@@ -16,6 +16,7 @@ public class ValidParanthesis {
         // if its true pop it.
         // in the end if the bracket is empty return true else false.
 
+        
         Stack<Character> stack = new Stack<>();
         for (char ch: s.toCharArray()){
             if (ch == '(' || ch == '{' || ch == '['){
