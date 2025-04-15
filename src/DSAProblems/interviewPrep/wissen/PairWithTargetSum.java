@@ -1,5 +1,6 @@
 package DSAProblems.interviewPrep.wissen;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PairWithTargetSum {
@@ -32,11 +33,10 @@ static  boolean  hasTwoSum(int[] nums, int target) {
         while (left < right) {
             int sum = nums[left] + nums[right];
             if (sum == target) {
-                return { nums[left], nums[right]};
-            };
-            else if (sum < target) left++;
+                return  new int[]{left,right};
+            } else if (sum < target) left++;
             else right--;
         }
-        return false;
+        return new int[] {-1,-1};
     }
 }
