@@ -1,4 +1,4 @@
-package DSAProblems.interviewPrep.mostAsked;
+package DSAProblems.interviewPrep.dsaMostAsked;
 
 
 public class BuyandSellStock {
