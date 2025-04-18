@@ -1,4 +1,4 @@
-package DSAProblems.interviewPrep.wissen;
+package DSAProblems.interviewPrep.mostAsked;
 
 import java.util.ArrayList;
 import java.util.Arrays;

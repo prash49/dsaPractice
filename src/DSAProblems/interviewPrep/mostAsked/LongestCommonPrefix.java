@@ -1,6 +1,4 @@
-package DSAProblems.interviewPrep.wissen;
-
-import java.io.ObjectOutputStream;
+package DSAProblems.interviewPrep.mostAsked;
 
 public class LongestCommonPrefix {
     public static void main(String[] args) {
