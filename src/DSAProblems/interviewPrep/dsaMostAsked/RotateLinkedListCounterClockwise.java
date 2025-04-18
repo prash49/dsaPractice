@@ -1,4 +1,4 @@
-package DSAProblems.interviewPrep.mostAsked;
+package DSAProblems.interviewPrep.dsaMostAsked;
 
 public class RotateLinkedListCounterClockwise {
     public static void main(String[] args) {
