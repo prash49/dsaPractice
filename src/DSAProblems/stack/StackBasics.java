@@ -22,5 +22,20 @@ public class StackBasics {
         System.out.println(stack.pop());
         System.out.println(stack);
         System.out.println(stack.peek());
+
+        MinStack minStack = new MinStack();
+        minStack.push(5);
+        System.out.println(minStack.top());
+        System.out.println(minStack.min());
+        minStack.push(3);
+        System.out.println(minStack.top());
+        System.out.println(minStack.min());
+        minStack.push(40);
+        minStack.push(50);
+        minStack.push(100);
+        System.out.println(minStack.top());
+        minStack.pop();
+        System.out.println(minStack.top());
+
     }
 }
