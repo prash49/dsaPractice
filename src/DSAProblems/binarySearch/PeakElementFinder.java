@@ -1,0 +1,30 @@
+package DSAProblems.binarySearch;
+
+public class PeakElementFinder {
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 8, 12, 4, 2};
+        int peak = findPeakElement(arr);
+        System.out.println("The peak element is: " + peak);
+    }
+
+    public static int findPeakElement(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] < arr[mid + 1]) {
+                // Peak is in the right half
+                left = mid + 1;
+            } else {
+                // Peak is in the left half or at mid
+                right = mid;
+            }
+        }
+
+        // left and right will converge to the peak element
+        return arr[left];
+    }
+}
