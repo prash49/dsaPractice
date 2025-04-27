@@ -1,5 +1,8 @@
 package DSAProblems.Arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CountSubArraySumEqualsK {
     /*Given an array of integers and an integer k, return the total number of subarrays whose sum equals k.
 
@@ -18,6 +21,22 @@ Explanation:  The subarrays that sum up to 6 are [3, 1, 2] and [2, 4].
         System.out.println("The number of subarrays is: " + cnt);
         int cnt2 = findAllSubarraysWithGivenSumBetterSol(arr, k);
         System.out.println("The number of subarrays is better solution: " + cnt2);
+        int cnt3 = sumArraySumEqualsKUsingMap(arr, k);
+        System.out.println("The number of subarrays is better solution: " + cnt3);
+    }
+
+    private static int sumArraySumEqualsKUsingMap(int[] arr, int k) {
+        Map<Integer,Integer> map =new HashMap<>();
+        int prefixSum = 0;
+        int count = 0;
+        for (int num : arr){
+            prefixSum += num;
+            if (map.containsKey(prefixSum - k)){
+                count += map.get(prefixSum - k);
+            }
+            map.put(prefixSum, map.getOrDefault(prefixSum,0)+1);
+        }
+        return count;
     }
 
     //Brute force
