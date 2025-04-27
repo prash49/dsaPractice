@@ -17,6 +17,8 @@ public class StringPalindrome {
           if (Character.toLowerCase(str.charAt(left)) != Character.toLowerCase(str.charAt(right))){
               return false;
           }
+          left++;
+          right--;
         }
         return true;
     }

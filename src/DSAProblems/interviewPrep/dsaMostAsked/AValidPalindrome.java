@@ -21,6 +21,8 @@ public class AValidPalindrome {
             if (Character.toLowerCase(str.charAt(i)) != Character.toLowerCase(str.charAt(j))){
                 return false;
             }
+            i++;
+            j--;
         }
 
         return true;
