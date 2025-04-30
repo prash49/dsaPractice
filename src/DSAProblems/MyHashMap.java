@@ -9,7 +9,7 @@ class MyHashMap<K, V> {
     }
 
     public void put(K key, V value) {
-        int index = key.hashCode() % SIZE;
+        int index = key.hashCode() % SIZE; // or use key.hashcode() & (size -1)
         table[index] = value;
     }
 
