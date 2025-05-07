@@ -1,6 +1,8 @@
 package interview;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Test {
@@ -16,5 +18,11 @@ public class Test {
             System.out.println("duplicates not present");
         });
 
+        System.out.println("data:"+ nums.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream().filter(entry -> entry.getValue() > 1)
+                        .map(Map.Entry::getKey)
+                .findFirst().orElse(0));
     }
 }
