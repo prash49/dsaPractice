@@ -1,0 +1,5 @@
+Sliding Window
+Works on the concept : add or remove
+--> find the running sum till k size reaches
+--> find the window size by maintaining the two Pointers
+--> windowSize = j - i + 1 (oth index)
