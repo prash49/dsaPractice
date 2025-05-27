@@ -24,6 +24,4 @@ public class MinimumSizeSubArraySum {
         }
         return min_Length == Integer.MAX_VALUE ? 0 : min_Length;
     }
-
-}
 }
