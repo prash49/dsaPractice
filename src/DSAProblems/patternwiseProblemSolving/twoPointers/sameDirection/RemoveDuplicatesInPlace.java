@@ -1,4 +1,4 @@
-package DSAProblems.twoPointers.sameDirection;
+package DSAProblems.patternwiseProblemSolving.twoPointers.sameDirection;
 
 import java.util.Arrays;
 
