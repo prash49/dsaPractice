@@ -25,7 +25,7 @@ public class SquareSortedArrayInSortedOrder {
             if (leftSqaure > rightSquare) {
                 resultArray[resultIndex] = leftSqaure;
                 left++;
-            } else if (rightSquare >= leftSqaure) {
+            } else {
                 resultArray[resultIndex] = rightSquare;
                 right--;
             }
