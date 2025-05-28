@@ -23,8 +23,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
             int currentLength = right - left + 1;
             maxLength = Math.max(maxLength, currentLength);
         }
-
-
         return maxLength;
     }
 }
