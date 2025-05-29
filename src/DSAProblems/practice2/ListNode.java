@@ -2,7 +2,7 @@ package DSAProblems.practice2;
 
 
 public class ListNode {
-    int value;
+  public   int value;
     public  ListNode prev;
     public ListNode next;
 

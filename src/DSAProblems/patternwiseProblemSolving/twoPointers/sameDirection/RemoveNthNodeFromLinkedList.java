@@ -14,6 +14,10 @@ public class RemoveNthNodeFromLinkedList {
         listNode1.next.next = new ListNode(4);
         listNode1.next.next.next = new ListNode(5);
         removeNthNodeFromLL(listNode, 3);
+       while (listNode != null){
+           System.out.print(listNode.value + " -> ");
+           listNode = listNode.next;
+       }
     }
 
     private static ListNode removeNthNodeFromLL(ListNode listNode, int n) {
