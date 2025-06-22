@@ -11,10 +11,11 @@ public class BuyandSellStock {
         int buyValue = prices[0];
         int profitMade = 0;
         for (int i = 0; i < prices.length; i ++){
-            if (buyValue >= prices[i]){
-                buyValue = prices[i];
+            int currentPrice = prices[i];
+            if (buyValue >= currentPrice){
+                buyValue = currentPrice;
             }
-            profitMade = Math.max(profitMade, prices[i] - buyValue);
+            profitMade = Math.max(profitMade, currentPrice - buyValue);
         }
         return profitMade;
     }
